@@ -1,0 +1,4 @@
+A, B = input().split()
+print(int(A)+int(B))
+
+#input으로 받을 시 문자열로 입력이 되기 때문에 따로 int함수를 써서 정수로 만들어줘야 한다
