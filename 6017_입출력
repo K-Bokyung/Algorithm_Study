@@ -1,0 +1,4 @@
+# https://codeup.kr/problem.php?id=6017
+
+n = input()
+print(n, n, n)

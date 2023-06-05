@@ -1,0 +1,5 @@
+# https://codeup.kr/problem.php?id=6020
+
+n = input()
+a, b = n.split('-')
+print(a, b, sep = '')
