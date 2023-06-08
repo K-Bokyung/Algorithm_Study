@@ -1,0 +1,9 @@
+# https://school.programmers.co.kr/learn/courses/30/lessons/120809
+
+def solution(numbers):        
+    answer = []
+    for i in range(len(numbers)):
+        a = numbers[i]
+        b = a * 2
+        answer.append(b)
+    return answer
