@@ -1,0 +1,6 @@
+# https://codeup.kr/problem.php?id=6033
+
+n = input()
+a = ord(n)
+
+print(chr(a+1))
