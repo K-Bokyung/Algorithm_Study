@@ -1,0 +1,20 @@
+# https://school.programmers.co.kr/learn/courses/30/lessons/120818
+
+import math
+
+def solution(price):
+    answer = 0
+    a = 100000
+    b = 300000
+    c = 500000
+    
+    if price >= c:
+        answer = math.trunc(price * 0.8)
+    elif price >= b:
+        answer = math.trunc(price * 0.9)
+    elif price >= a:
+        answer = math.trunc(price * 0.95)
+    else:
+        answer = price
+        
+    return answer
