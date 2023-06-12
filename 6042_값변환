@@ -1,0 +1,5 @@
+# https://codeup.kr/problem.php?id=6042
+
+n = float(input())
+
+print(format(n, ".2f"))

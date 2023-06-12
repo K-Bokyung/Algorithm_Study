@@ -1,0 +1,6 @@
+# https://codeup.kr/problem.php?id=6041
+
+a, b = map(int, input().split())
+c = a % b
+
+print(c)
