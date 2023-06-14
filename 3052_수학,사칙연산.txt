@@ -1,0 +1,15 @@
+# https://www.acmicpc.net/problem/3052
+
+n = 10
+num = []
+result = 0
+
+for i in range(n) :
+    a = int(input())
+    x = a % 42
+    num.append(x)
+
+num = set(num)
+result = len(num)
+
+print(result)
