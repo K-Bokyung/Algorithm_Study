@@ -1,0 +1,7 @@
+# https://codeup.kr/problem.php?id=6085
+
+w, h, b = map(int, input().split())
+b = b/8/1024/1024
+n = w * h * b
+
+print(format(n, '.2f'), 'MB', sep=' ')
