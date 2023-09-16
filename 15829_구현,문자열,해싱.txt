@@ -1,0 +1,13 @@
+# https://www.acmicpc.net/problem/15829
+
+l = int(input())
+r = 31
+m = 1234567891
+sentence = input()
+result = 0
+
+for i in range(l):
+    n = ord(sentence[i]) - 96
+    result += n * (r ** i)
+
+print(result % m)

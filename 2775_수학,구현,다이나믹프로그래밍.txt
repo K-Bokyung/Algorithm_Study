@@ -1,0 +1,14 @@
+# https://www.acmicpc.net/problem/2775
+
+t = int(input())
+
+for _ in range(t):
+    k = int(input())
+    n = int(input())
+    kline = [x for x in range(1, n+1)]
+    
+    for i in range(k):
+        for j in range(1, n):
+            kline[j] += kline[j-1]
+            
+    print(kline[-1])
