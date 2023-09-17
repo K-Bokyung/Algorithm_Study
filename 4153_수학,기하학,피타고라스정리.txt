@@ -1,0 +1,11 @@
+# https://www.acmicpc.net/problem/4153
+
+while True:
+    n_list = sorted(list(map(int, input().split())))
+    if n_list[2] == 0:
+        break
+
+    if n_list[0]**2 + n_list[1]**2 == n_list[2]**2:
+        print('right')
+    else:
+        print('wrong')
