@@ -1,0 +1,26 @@
+# https://www.acmicpc.net/problem/1874
+
+n = int(input())
+stack = []
+result = []
+x = 1
+y = 0
+
+for _ in range(n):
+    num = int(input())
+    while x <= num:
+        stack.append(x)
+        result.append("+")
+        x += 1
+    
+    if stack[-1] == num:
+        stack.pop()
+        result.append("-")
+    else:
+        print("NO")
+        y = 1
+        break
+
+if y == 0:
+    for i in range(len(result)):
+        print(result[i])
