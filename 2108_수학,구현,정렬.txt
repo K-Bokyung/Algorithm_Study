@@ -1,0 +1,27 @@
+# https://www.acmicpc.net/problem/2108
+
+import sys
+from collections import Counter
+
+n = int(sys.stdin.readline())
+num_list = [int(sys.stdin.readline()) for _ in range(n)]
+
+ave_num = sum(num_list) / n
+print(round(ave_num))
+
+num_list.sort()
+mid_num = num_list[n // 2]
+print(mid_num)
+
+count = Counter(num_list).most_common()
+if len(count) > 1:
+  if count[0][1] == count[1][1]:
+      mod_num = count[1][0]
+  else:
+      mod_num = count[0][0]
+else:
+      mod_num = count[0][0]
+print(mod_num)
+
+ran_num = max(num_list) - min(num_list)
+print(ran_num)
