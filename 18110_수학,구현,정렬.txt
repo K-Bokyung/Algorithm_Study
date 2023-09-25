@@ -1,0 +1,23 @@
+# https://www.acmicpc.net/problem/18110
+
+import sys
+
+def new_round(num):
+  return int(num) + (1 if num - int(num) >= 0.5 else 0)
+
+n = int(input())
+
+if n == 0:
+  print(0)
+else:
+  opinion_list = [int(sys.stdin.readline()) for _ in range(n)]
+  opinion_list.sort()
+  cut_num = new_round(n * 0.15)
+  end_num = n - cut_num
+  result = 0
+  
+  for i in range(cut_num, end_num):
+    result += opinion_list[i]
+  
+  result = new_round(result / (n - (2 * cut_num)))
+  print(result)
