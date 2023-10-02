@@ -1,0 +1,31 @@
+# https://www.acmicpc.net/problem/4949
+
+while True:
+    n = input()
+    n_stack = []
+    
+    if n == '.':
+        break
+
+    for i in n:
+        if i == '[' or i == '(':
+            n_stack.append(i)
+
+        elif i == ']':
+            if len(n_stack) > 0 and n_stack[-1] == '[':
+                n_stack.pop()
+            else:
+                n_stack.append(i)
+                break
+
+        elif i == ')':
+            if len(n_stack) > 0 and n_stack[-1] == '(':
+                n_stack.pop()
+            else:
+                n_stack.append(i)
+                break
+    
+    if len(n_stack) == 0:
+        print('yes')
+    else:
+        print('no')
