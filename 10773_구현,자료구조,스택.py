@@ -1,5 +1,6 @@
 # https://www.acmicpc.net/problem/10773
 
+# 1
 k = int(input())
 k_list = []
 result = 0
@@ -13,3 +14,18 @@ for _ in range(k):
 
 result = sum(k_list)
 print(result)
+
+# 2
+import sys
+
+K = int(sys.stdin.readline())
+result = []
+
+for _ in range(K):
+    money = int(sys.stdin.readline())
+    if money == 0:
+        result.pop()
+    else:
+        result.append(money)
+
+print(sum(result))

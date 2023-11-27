@@ -1,5 +1,6 @@
 # https://www.acmicpc.net/problem/10828
 
+# 1
 import sys
 
 n = int(input())
@@ -29,5 +30,38 @@ for _ in range(n):
     elif order[0] == 'top':
         if len(s) > 0:
             print(s[-1])
+        else:
+            print(-1)
+
+# 2
+import sys
+
+N = int(sys.stdin.readline())
+result = []
+
+for _ in range(N):
+    i, *num = sys.stdin.readline().split()
+    
+    if i == 'push':
+        result.append(int(*num))
+
+    elif i == 'pop':
+        if result:
+            print(result.pop())
+        else:
+            print(-1)
+
+    elif i == 'size':
+        print(len(result))
+
+    elif i == 'empty':
+        if result:
+            print(0)
+        else:
+            print (1)
+
+    elif i == 'top':
+        if result:
+            print(result[-1])
         else:
             print(-1)
