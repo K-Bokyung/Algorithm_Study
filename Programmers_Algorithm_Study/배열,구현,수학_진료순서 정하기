@@ -1,0 +1,11 @@
+# https://school.programmers.co.kr/learn/courses/30/lessons/120835
+
+def solution(emergency):
+    answer = []
+    n = len(emergency)
+    es = sorted(emergency, reverse = True)
+    for i in range(n):
+        for j in range(n):
+            if emergency[i] == es[j]:
+                answer.append(j+1)
+    return answer

@@ -1,0 +1,16 @@
+# https://school.programmers.co.kr/learn/courses/30/lessons/120819
+
+def solution(money):
+    answer = [0] * 2
+    price = 5500
+    cups = 0
+    charge = 0
+    if money < 5500:
+        answer[0] = 0
+        answer[1] = money
+    else:
+        cups = money // price
+        charge = money - (price * cups)
+        answer[0] = cups
+        answer[1] = charge
+    return answer

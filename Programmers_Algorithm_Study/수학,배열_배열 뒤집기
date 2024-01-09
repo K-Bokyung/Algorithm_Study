@@ -1,0 +1,9 @@
+# https://school.programmers.co.kr/learn/courses/30/lessons/120821
+
+def solution(num_list):
+    answer = []
+    n = len(num_list)
+    for i in range(0, n):
+        a = n - i - 1
+        answer.append(num_list[a])
+    return answer

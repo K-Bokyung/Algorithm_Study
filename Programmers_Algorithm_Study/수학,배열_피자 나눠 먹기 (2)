@@ -1,0 +1,14 @@
+# https://school.programmers.co.kr/learn/courses/30/lessons/120815
+
+def lcm(a, b):
+    for i in range(max(a, b), a*b+1):
+        if i % a == 0 and i % b == 0:
+            return i
+
+def solution(n):
+    answer = 0
+    
+    a = lcm(n, 6)
+    answer = a // 6
+    
+    return answer

@@ -1,0 +1,10 @@
+# https://school.programmers.co.kr/learn/courses/30/lessons/120834
+
+def solution(age):
+    answer = ''
+    age = str(age)
+    alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+    for i in age:
+        i = int(i)
+        answer += alpha[i]
+    return answer
