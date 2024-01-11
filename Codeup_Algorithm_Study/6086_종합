@@ -1,0 +1,13 @@
+# https://codeup.kr/problem.php?id=6086
+
+a = int(input())
+b = 0
+c = 1
+
+while True:
+    b = b + c
+    c += 1
+    if b >= a:
+        break
+
+print(b)

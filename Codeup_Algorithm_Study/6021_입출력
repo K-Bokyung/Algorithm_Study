@@ -1,0 +1,6 @@
+# https://codeup.kr/problem.php?id=6021
+
+a = input()
+
+for i in range(0, len(a)):
+    print(a[i])

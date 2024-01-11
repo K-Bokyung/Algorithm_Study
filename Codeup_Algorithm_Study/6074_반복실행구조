@@ -1,0 +1,8 @@
+# https://codeup.kr/problem.php?id=6074
+
+n = ord(input())
+m = ord('a')
+
+while n >= m :
+    print(chr(m), end = ' ')
+    m += 1

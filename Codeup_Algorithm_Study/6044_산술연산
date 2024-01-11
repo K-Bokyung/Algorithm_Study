@@ -1,0 +1,11 @@
+# https://codeup.kr/problem.php?id=6044
+
+a, b = map(int, input().split())
+c = a / b
+
+print(a + b)
+print(a - b)
+print(a * b)
+print(a // b)
+print(a % b)
+print(format(c, ".2f"))

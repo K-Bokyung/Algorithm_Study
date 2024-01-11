@@ -1,0 +1,6 @@
+# https://codeup.kr/problem.php?id=6076
+
+a = int(input())
+
+for i in range(a+1):
+    print(i)

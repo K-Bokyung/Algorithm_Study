@@ -1,0 +1,6 @@
+# https://codeup.kr/problem.php?id=6036
+
+a, b = input().split()
+b = int(b)
+
+print(a * b)

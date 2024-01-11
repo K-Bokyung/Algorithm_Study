@@ -1,0 +1,6 @@
+# https://codeup.kr/problem.php?id=6063
+
+a, b = map(int, input().split())
+c = a if (a >= b) else b
+
+print(c)

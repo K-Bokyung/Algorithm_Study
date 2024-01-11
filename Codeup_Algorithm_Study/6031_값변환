@@ -1,0 +1,5 @@
+# https://codeup.kr/problem.php?id=6031
+
+n = int(input())
+
+print(chr(n))

@@ -1,0 +1,8 @@
+# https://codeup.kr/problem.php?id=6075
+
+a = int(input())
+b = 0
+
+while a >= b :
+    print(b, end = '\n')
+    b += 1
