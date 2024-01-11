@@ -1,0 +1,11 @@
+# https://www.acmicpc.net/problem/2292
+
+n = int(input())
+start = 1
+stage = 1
+
+while n > start:
+    start += stage * 6
+    stage += 1
+
+print(stage)

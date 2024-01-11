@@ -1,0 +1,15 @@
+# https://www.acmicpc.net/problem/8958
+
+n = int(input())
+
+for _ in range(n) :
+    a = input()
+    x = 0
+    result = 0
+    for i in a :
+        if i == 'O' :
+            x += 1
+        else :
+            x = 0
+        result += x
+    print(result)

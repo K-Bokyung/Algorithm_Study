@@ -1,0 +1,12 @@
+# https://www.acmicpc.net/problem/2475
+
+a, b, c, d, e = map(int, input().split())
+n = [a, b, c, d, e]
+m = 0
+answer = 0
+
+for i in range(5) :
+    m += n[i] ** 2
+
+answer = m % 10
+    print(answer)

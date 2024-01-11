@@ -1,0 +1,25 @@
+# https://www.acmicpc.net/problem/18111
+
+import sys
+
+n, m, b = map(int, input().split())
+m_map = [list(map(int, sys.stdin.readline().split())) for _ in range(n)]
+result = int(1e9)
+floor = 0
+
+for f in range(257):
+    over_block, lack_block = 0, 0
+    
+    for i in range(n):
+        for j in range(m):
+            if m_map[i][j] > f:
+                over_block += m_map[i][j] - f
+            else:
+                lack_block += f - m_map[i][j]
+
+    if over_block + b >= lack_block:
+        if (over_block * 2) + lack_block <= result:
+            result = (over_block * 2) + lack_block
+            floor = f
+
+print(result, floor)

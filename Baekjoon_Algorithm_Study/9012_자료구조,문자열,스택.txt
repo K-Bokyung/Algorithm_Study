@@ -1,0 +1,23 @@
+# https://www.acmicpc.net/problem/9012
+
+t = int(input())
+
+for _ in range(t):
+    input_list = []
+    vps_input = input()
+    
+    for i in vps_input:
+        if i == '(':
+            input_list.append(i)
+        elif i == ')':
+            if len(input_list) > 0:
+                input_list.pop()
+            else:
+                print('NO')
+                break
+    
+    else:
+        if len(input_list) == 0:
+            print('YES')
+        else:
+            print('NO')
