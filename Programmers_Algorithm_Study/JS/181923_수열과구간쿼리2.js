@@ -3,28 +3,29 @@
 function solution(arr, queries) {
   let answer = [];
 
-  for (i = 0; i < queries.length; i++) {
-    console.log('i1', i);
+  // 이전 풀이 (실패)
+  // for (i = 0; i < queries.length; i++) {
+  //   let query = queries[i];
+  //   let s = query[0];
+  //   let e = query[1];
+  //   let k = query[2];
 
-    let query = queries[i];
-    let s = query[0];
-    let e = query[1];
-    let k = query[2];
-    let min_num = 0;
+  //   let num_list = arr.slice(s, e + 1);
+  //   num_list.forEach((item) => {
+  //     if (k < item && answer.length < i + 1) {
+  //       answer.push(item);
+  //     } else if (k < item && answer.length == i + 1 && item < answer[i]) {
+  //       answer[i] = item;
+  //     } else if (item == num_list[e] && answer.length < i + 1) {
+  //       answer.push(-1);
+  //     }
+  //   });
+  // }
 
-    for (i = s; i < e; i++) {
-      console.log('i2', i);
-
-      if (k < arr[i] && min_num == 0) {
-        min_num = arr[i];
-      } else if (k < arr[i] && arr[i] < min_num) {
-        min_num = arr[i];
-      } else if (i == e - 1 && min_num == 0) {
-        min_num = -1;
-      }
-
-      answer.push(min_num);
-    }
+  // 재풀이
+  for (let [s, e, k] of queries) {
+    let num = arr.filter((item, idx) => idx >= s && idx <= e && item > k).sort((a, b) => a - b)[0];
+    answer.push(num ? num : -1);
   }
 
   return answer;
