@@ -30,11 +30,3 @@ function solution(arr, queries) {
 
   return answer;
 }
-
-const arr = [0, 1, 2, 4, 3];
-const queries = [
-  [0, 4, 2],
-  [0, 3, 2],
-  [0, 2, 2],
-];
-console.log(solution(arr, queries));
