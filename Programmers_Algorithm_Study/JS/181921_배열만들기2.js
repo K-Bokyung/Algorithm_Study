@@ -3,22 +3,16 @@
 function solution(l, r) {
   let answer = [];
 
-  // 1. l과 r 사이에 있는 5의 배수 구하기
   for (i = l; i < r + 1; i++) {
-    let str_num = '';
+    let str_list = i.toString();
 
-    if (i % 5 == 0) {
-      str_num = i.toString().split('');
+    if (![...str_list].every((item) => item === '5' || item === '0')) continue;
+    answer.push(i);
+  }
 
-      // answer.push(str_num ? i : -1);
-
-      console.log(i, str_num);
-    }
+  if (answer.length == 0) {
+    answer.push(-1);
   }
 
   return answer;
 }
-
-const l = 5;
-const r = 55;
-console.log(solution(l, r));
