@@ -1,30 +1,20 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/181881
 
-function calculation(arr) {
-  let arr1 = [];
-  for (i = 0; i < arr.length; i++) {
-    if (arr >= 50 && arr % 2 === 0) {
-      arr1.push(arr[i] / 2);
-    } else if (arr < 50 && arr % 2 === 1) {
-      arr1.push(arr[i] * 2 + 1);
-    } else {
-      arr1.push(arr[i]);
-    }
-
-    return arr;
-  }
-}
-
 function solution(arr) {
   let answer = 0;
-  let arr1 = [];
-  let arr2 = [];
-  let x = 1;
+  let x = 0;
+  let arr_x = [...arr];
 
-  for (i = 0; i <= x; i++) {
-    arr1 = calculation(arr);
+  while (true) {
+    let arr_y = arr_x.map((item) =>
+      item >= 50 && item % 2 === 0 ? (item /= 2) : item < 50 && item % 2 === 1 ? item * 2 + 1 : item
+    );
+
+    if (arr_y.toString() == arr_x.toString()) break;
+    arr_x = arr_y;
+    x += 1;
   }
-  console.log(arr1);
+  answer = x;
 
   return answer;
 }
