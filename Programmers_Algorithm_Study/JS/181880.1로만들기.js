@@ -2,27 +2,21 @@
 
 function solution(num_list) {
   let answer = 0;
-  let x = 0;
-  let idx = 0;
-  let list_x = [...num_list];
+  let turn = 0;
+  let list_x = num_list.filter((num) => num > 1);
 
   while (true) {
-    let num = num_list[idx];
-    let num2 = num % 2 === 0 ? (num /= 2) : num !== 1 ? (num - 1) / 2 : num;
-    console.log('num_list', num2);
+    let list_y = list_x.map((item) =>
+      item % 2 === 0 ? (item /= 2) : item !== 1 ? (item - 1) / 2 : item
+    );
 
-    if (num !== 1) {
-      num = num2;
-      console.log('if문 실행');
-    } else {
-      idx += 1;
-    }
-    x += 1;
+    turn += list_y.length;
 
-    if (num === 1 && idx === num_list.length - 1) break;
+    if (list_y.filter((num) => num > 1).length === 0) break;
+    list_x = list_y.filter((num) => num > 1);
   }
 
-  answer = x;
+  answer = turn;
 
   return answer;
 }
