@@ -2,22 +2,17 @@
 
 function solution(myString, pat) {
   let answer = 0;
-  let first_pat = myString.indexOf(pat);
-  answer += 1;
-  myString.slice(first_pat + 1, myString.length) > 0
-    ? (myString = myString.slice(first_pat + pat.length, myString.length))
-    : undefined;
 
-  console.log(myString.slice(first_pat + 1, myString.length));
-
-  // while (myString.length > 0) {
-  //   let str = myString.slice(first_pat + 1, myString.length);
-  //   str.search(pat) ? (str = s) : (myString = '');
-  // }
+  while (myString.length > 0) {
+    let str = myString.match(pat);
+    answer += 1;
+    myString = myString.slice(str.index + 1, myString.length);
+    myString.length < pat.length ? (myString = 0) : undefined;
+  }
 
   return answer;
 }
 
-const myString = 'banana';
-const pat = 'ana';
+const myString = 'aaaa';
+const pat = 'aa';
 console.log(solution(myString, pat));
