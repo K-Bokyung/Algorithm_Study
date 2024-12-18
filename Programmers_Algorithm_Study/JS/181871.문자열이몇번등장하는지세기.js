@@ -3,11 +3,13 @@
 function solution(myString, pat) {
   let answer = 0;
 
-  while (myString.length > 0) {
-    let str = myString.match(pat);
-    answer += 1;
-    myString = myString.slice(str.index + 1, myString.length);
-    myString.length < pat.length ? (myString = 0) : undefined;
+  if (myString.includes(pat)) {
+    for (i = 0; i < myString.length; i++) {
+      let str_s = myString.slice(i, myString.length);
+      str_s.includes(pat)
+        ? ((myString = str_s), (answer += 1), (i = myString.match(pat).index))
+        : (myString = '');
+    }
   }
 
   return answer;
